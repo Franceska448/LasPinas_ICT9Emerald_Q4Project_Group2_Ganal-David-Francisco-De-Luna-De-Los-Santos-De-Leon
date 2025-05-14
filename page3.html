@@ -3,178 +3,191 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amber's Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <title>ICT 4th Quarter Project | Online Student Portfolio</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet"/>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
+      font-family: 'Nunito', sans-serif;
     }
-    .navbar {
-      background: linear-gradient(to right, #FF883E, #FFD942);
+
+    .folder-icon::before {
+      content: "\1F4C1"; 
+      margin-right: 0.5rem;
     }
-    .header-title {
-      font-weight: bold;
-      font-size: 2em;
-      text-align: center;
-      margin-top: 20px;
-      background-color: #FF883E;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    .profile-section {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-      gap: 20px;
-    }
-    .profile-img {
+
+    img.obmc-header {
       width: 200px;
-      border-radius: 10px;
+      height: auto;
+      object-fit: contain;
+      border: 2px solid #ffffff;
+      margin-bottom: 1rem;
     }
-    .profile-table {
-      width: 500px;
+
+    .bg-pink {
+      background-color: #c08484 !important;
     }
-    .quarter-section {
-      text-align: center;
-      margin-top: 50px;
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: white !important;
     }
-    .quarter-section h3 {
-      background-color: #FFD942;
-      color: white;
-      padding: 10px;
-      border-radius: 5px;
+
+    .navbar .nav-link:hover {
+      color: #ffeef5 !important;
     }
-    .accordion-button {
-      background: linear-gradient(to right, #FF883E, #FFD942);
-      color: white;
-      font-weight: bold;
+
+    .btn-white {
+      background-color: white;
+      color: #97b6bd;
+      border: 1px solid #db92a1;
+    }
+
+    .btn-white:hover {
+      background-color: #a9cdd5;
+      color: #fefdfd;
+      border-color: #debfbf;
     }
     .quarter-img {
       width: 100%;
       max-width: 600px;
       border-radius: 10px;
     }
-    .accordion-container {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .footer {
-      background: linear-gradient(to right, #FF883E, #FFD942);
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 50px;
-    }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg bg-pink sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a class="navbar-brand" href="#">Student Portfolios</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    
+    <div class="collapse navbar-collapse" id="navbarContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="page1.html">Main</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html">Ganal</a></li>
-        <li class="nav-item"><a class="nav-link" href="page3.html">Francisco</a></li>
-        <li class="nav-item"><a class="nav-link" href="page4.html">David</a></li>
+        <li class="nav-item"><a class="nav-link active" href="page1.html">Main</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Ganal</a></li>
+        <li class="nav-item"><a class="nav-link" href="page3">Francisco</a></li>
+        <li class="nav-item"><a class="nav-link" href="page4">David</a></li>
         <li class="nav-item"><a class="nav-link" href="page5.html">De Luna</a></li>
-        <li class="nav-item"><a class="nav-link" href="page6.html">De Los Santos</a></li>
-        <li class="nav-item"><a class="nav-link" href="page7.html">De Leon</a></li>
+        <li class="nav-item"><a class="nav-link" href="page6">De Los Santos</a></li>
+        <li class="nav-item"><a class="nav-link" href="page7">De Leon</a></li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search projects..." aria-label="Search">
+        <button class="btn btn-white" type="submit">Search</button>
       </form>
     </div>
   </div>
 </nav>
 
-<h1 class="header-title">MY ONLINE PORTFOLIO</h1>
-<p class="text-center mt-3">From 9-Emerald, a portfolio for the 2024–2025 school year using HTML, CSS, Bootstrap, and JavaScript.</p>
+<div class="container py-5">
 
-<div class="profile-section">
-  <img src="pfp.png" alt="Amber" class="profile-img"/>
-  <table class="table table-bordered profile-table">
-    <thead class="table-light">
-      <tr><th colspan="2" class="text-center">Profile Information</th></tr>
-    </thead>
-    <tbody>
-      <tr><td><strong>Name:</strong></td><td>Amber Ephesiah M. Francisco</td></tr>
-      <tr><td><strong>Interests/Clubs:</strong></td><td>Roblox, Pinterest, Dancing</td></tr>
-      <tr><td><strong>Ambition:</strong></td><td><em>"I assume that in the near future, I'd be capable of handling new opportunities as I grow up and start to strive in learning full-on math techniques."</em></td></tr>
-    </tbody>
-  </table>
-</div>
+  <header class="text-center mb-5">
+    <img src="Header obmc.png" alt="obmc header" class="obmc-header mx-auto d-block" />
+    <h1 class="display-5">Amber Ephesiah M. Francisco</h1>
+    <p class="lead">Grade 9 - Emerald</p>
+  </header>
 
-<div class="quarter-section">
-  <h3>Quarter Projects</h3>
-  <div class="accordion-container">
-    <div class="accordion accordion-flush" id="accordionProjects">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q1">Quarter 1</button>
-        </h2>
-        <div id="q1" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <a href="https://fumbluhamber.github.io/LP_ICT9EMERALD_Q1PROJ_FRANCISCO_AMBER/">
-            <img src="Q1.png" alt="Q1 Project" class="quarter-img"/>
-            </a>
-          </div>
-        </div>
+  <section class="mb-5">
+    <h2 class="h4 mb-3">About Me</h2>
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+        <img src="pifep.png" alt="amber" class="img-fluid rounded shadow" style="max-width: 200px;">
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Quarter 2</button>
-        </h2>
-        <div id="q2" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <a href="https://fumbluhamber.github.io/LP_ICT9E_Q2PROJ_Francisco_Amber/">
-            <img src="Q2.png" alt="Q2 Project" class="quarter-img"/>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">Quarter 3</button>
-        </h2>
-        <div id="q3" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <a href="https://fumbluhamber.github.io/LP_ICT9E_Q3PROJECT_FRANCISCO_AMBER/">
-            <img src="Q3.png" alt="Q3 Project" class="quarter-img"/>
-            </a>
-          </div>
-        </div>
-      </div> 
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">Quarter 4</button>
-        </h2>
-        <div id="q4" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <a href="https://fumbluhamber.github.io/LP_ICT9E_Q4Quiz2_Francisco_Amber/">
-            <img src="Q4.png" alt="Q4 Project" class="quarter-img"/>
-            </a>
-          </div>
-        </div>
+      <div class="col-md-8">
+        <p><strong>Interests:</strong> Youtube, Gaming, & Dancing.</p>
+        <p><strong>Ambition:</strong> To be capable of handling new opportunities as I grow up and start to strive in learning full-on math techniques.</p>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="mb-5">
+    <h2 class="h4 mb-3">Quarter Projects</h2>
+    <div class="accordion" id="projectAccordion">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button folder" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+            <span class="folder-icon"></span> Quarter 1 Project | Online Shop Website
+          </button>
+        </h2>
+        <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <strong>Title:</strong> Quarter 1 - Project<br/>
+            A website featuring online deliveries!<br/>
+            <a href="https://fumbluhamber.github.io/LP_ICT9EMERALD_Q1PROJ_FRANCISCO_AMBER/" target="_blank">
+             <img src="Q13.png" alt="Q1 Project" class="quarter-img"/>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed folder" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+            <span class="folder-icon"></span> Quarter 2 Project | Recipe Sharing Website
+          </button>
+        </h2>
+        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <strong>Title:</strong> Quarter 2 - Project<br/>
+            A website that showcases fantastic and adventurous fictional recipes.<br/>
+            <a href="https://fumbluhamber.github.io/LP_ICT9E_Q2PROJ_Francisco_Amber/" target="_blank">
+              <img src="Q12.png" alt="Q1 Project" class="quarter-img"/>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed folder" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+            <span class="folder-icon"></span> Quarter 3 Project | Train Fare Guide
+          </button>
+        </h2>
+        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <strong>Title:</strong> Quarter 3 - Project<br/>
+            A train Fare Guide to relocate where you want to go.<br/>
+            <a href="https://fumbluhamber.github.io/LP_ICT9E_Q3PROJECT_FRANCISCO_AMBER/" target="_blank">
+              <img src="Q31.png" alt="Q1 Project" class="quarter-img"/>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed folder" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
+            <span class="folder-icon"></span> Quarter 4 Project | Online Portfolio
+          </button>
+        </h2>
+        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <strong>Title:</strong> Quarter 4 - Project | Online Student Portfolio Website<br/>
+            A final portfolio showcasing all projects, skills, and personal goals using Bootstrap and HTML.
+            <a href="https://fumbluhamber.github.io/LP_ICT9E_Q3PROJECT_FRANCISCO_AMBER/" target="_blank">
+              <img src="Q14.png" alt="Q1 Project" class="quarter-img"/></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="text-center py-4 border-top">
+    <p>© 2025 Ganal Francisco David De Luna De Los Santos De Leon. All rights reserved.</p>
+  </footer>
+
+  <footer class="text-center py-4 border-top">
+    <p>© 2025 OB Montessori Center Las Pinas Campus</p>
+  </footer>
 </div>
 
-<footer class="footer">
-  <p>Feel free to contact us when available!</p>
-  <p>OB Montessori Center Las Pinas Campus</p>
-  <p>©DE LUNA, @FRANCISCO, @GANAL, @DAVID, @DE LOS SANTOS</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
